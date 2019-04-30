@@ -1,13 +1,13 @@
-{% extends 'jobs/base.html' %}
+{% extends 'hof/base.html' %}
 {% load static %}
 {% block content %}
     <header>
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" href="{% url 'jobs:landing' %}">Jobs</a>
+    <a class="nav-link active" href="{% url 'hof:landing' %}">Jobs</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="{% url 'blog:landing' %}">Blog</a>
+    <a class="nav-link" href="#">notyet</a>
   </li>
 </ul>
 </header>
@@ -16,27 +16,25 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">Me llamo Chacal</h1>
-      <p class="lead text-muted"> Bienvenidos a mi pagina de obras con Django!</p>
+      <h1 class="jumbotron-heading">Hall O' Fame</h1>
+      <p class="lead text-muted"> this is the Hall of Fame!</p>
       <p>
-        <a href="#" class="btn btn-primary my-2">enviame correo</a>
+        <a href="#" class="btn btn-primary my-2">clic</a>
       </p>
     </div>
   </section>
-
+  <img src="{% static '/hof/img/k.jpg' %}" />
+  
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row">
-  {% for job in jobs %}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{ job.image.url }}">
             <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
+              <p class="card-text">"derp?"</p>
             </div>
           </div>
         </div>
-        {% endfor %}
       </div>
     </div>
   </div>
